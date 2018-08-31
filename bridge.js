@@ -4,7 +4,7 @@ var mqtt = require('mqtt');
 var brokerUrl = 'mqtt://orange-pi.local';
 
 var io  = require('socket.io').listen(5000);
-var client = mqtt.connect(brokerUrl, options);
+var client = mqtt.connect(brokerUrl);
  
 /*SOCKET*/
 io.sockets.on('connection', function (socket) {
